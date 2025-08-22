@@ -26,20 +26,22 @@ function HomeComponent() {
 
                 <div style={{ display: "flex", alignItems: "center" }}>
 
-                    <h2>Apna Video Call</h2>
+                    <h2 className='line-through font-medium text-green-500 text-3xl'>Konnect</h2>
                 </div>
 
-                <div style={{ display: "flex", alignItems: "center" }}>
-                    <IconButton onClick={
-                        () => {
-                            navigate("/history")
-                        }
-                    }>
-                        <RestoreIcon />
-                    </IconButton>
-                    <p>History</p>
+                <div className='flex gap-4 items-center'>
+                    <div className='flex'>
+                        <IconButton onClick={
+                            () => {
+                                navigate("/history")
+                            }
+                        }>
+                            <RestoreIcon />
+                        </IconButton>
+                        <p className='my-auto'>History</p>
+                    </div>
 
-                    <Button onClick={() => {
+                    <Button  onClick={() => {
                         localStorage.removeItem("token")
                         navigate("/auth")
                     }}>
@@ -64,8 +66,8 @@ function HomeComponent() {
                         </div>
                     </div>
                 </div>
-                <div className='rightPanel'>
-                    <img srcSet='/logo3.png' alt="" />
+                <div className='rightPanel '>
+                    <img srcSet='../../public/logo3.png' alt="" />
                 </div>
             </div>
         </>

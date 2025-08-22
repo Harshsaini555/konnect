@@ -456,10 +456,12 @@ export default function VideoMeetComponent() {
 
                     <h2>Enter into Lobby </h2>
                     <TextField id="outlined-basic" label="Username" value={username} onChange={e => setUsername(e.target.value)} variant="outlined" />
-                    <Button variant="contained" onClick={connect}>Connect</Button>
+                    <div className='inline relative top-2 left-2'>
+                        <Button variant="contained" onClick={connect}>Connect</Button>
+                    </div>
 
 
-                    <div>
+                    <div className='mx-auto mt-10 w-200 h-200'>
                         <video ref={localVideoref} autoPlay muted></video>
                     </div>
 
